@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Reels Booster — пошаговый алгоритм роста через Reels</title>
+  <meta name="description"
+    content="Преврати случайные просмотры Reels в пошаговый алгоритм набора целевого трафика и стабильного получения заявок через видео." />
+
+  <meta property="og:title" content="Reels Booster" />
+  <meta property="og:description" content="Пошаговый алгоритм роста через Reels" />
+  <meta property="og:type" content="website" />
+
+  <!--
+    Шрифты:
+    - Azo Sans (display) — лицензионный (Adobe Fonts). Если есть лицензия — подключите через @font-face и поставьте первым в --ff-display.
+    - Oswald — для тарифов и цен (Google Fonts).
+    - Inter — body (Google Fonts).
+    - Bad Script — рукописные подписи у скриншотов (Google Fonts).
+    - Manrope — fallback для Azo Sans.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Inter:wght@400;500;700&family=Manrope:wght@400;500;700;800&family=Oswald:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+     ВАЖНО ДЛЯ РАЗРАБОТЧИКА:
+     Все изображения здесь подгружаются прямо с Figma CDN
+     (короткоживущие URL — действительны ≈7 дней).
+     На прод нужно скачать оригиналы и положить в ./assets/
+     (см. README.md, секция «Контент-плейсхолдеры»).
+     Каждый <img> помечен data-asset="..." — это ID для замены.
+     ============================================================ -->
+
+  <!-- =============== 1. HERO =============== -->
+  <section class="section section--hero" id="hero">
+    <span class="bg-shape bg-shape--right" aria-hidden="true">
+      <img src="assets/image/hero-bg.png" width="1920" height="1080" alt="">
+    </span>
+    <div class="container hero__inner">
+      <div class="hero__content">
+        <span class="badge">REELS BOOSTER</span>
+
+        <h1 class="hero__title">
+          Преврати <span class="text-gradient">случайные просмотры Reels</span> в пошаговый алгоритм
+        </h1>
+
+        <p class="hero__subtitle">
+          который стабильно приводит целевых подписчиков и заявки
+        </p>
+
+        <div class="video-preview__mobile" data-video="hero">
+          <img class="video-preview__cover" src="assets/image/hero.png" width="476" height="876"
+            alt="Превью видео-приветствия" data-asset="hero-video-cover" loading="eager" />
+          <button type="button" class="video-preview__play" aria-label="Воспроизвести видео">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+              <path
+                d="M11.5 0C5.152 0 0 5.152 0 11.5C0 17.848 5.152 23 11.5 23C17.848 23 23 17.848 23 11.5C23 5.152 17.848 0 11.5 0ZM14.559 13.4895L13.087 14.3405L11.615 15.1915C9.7175 16.284 8.165 15.387 8.165 13.202V11.5V9.798C8.165 7.6015 9.7175 6.716 11.615 7.8085L13.087 8.6595L14.559 9.5105C16.4565 10.603 16.4565 12.397 14.559 13.4895Z"
+                fill="#F3F3F3" fill-opacity="0.75" />
+            </svg>
+          </button>
+        </div>
+
+        <div class="hero__cta">
+          <a href="#tariffs" class="btn btn--primary" data-product="hero-cta">Занять место</a>
+
+          <div class="social-proof">
+            <div class="avatars">
+              <span class="avatar" data-asset="hero-avatar-1">
+                <img src="assets/image/hero-avatar-1.png" width="48" height="48" alt="">
+              </span>
+              <span class="avatar" data-asset="hero-avatar-2">
+                <img src="assets/image/hero-avatar-2.png" width="48" height="48" alt="">
+              </span>
+              <span class="avatar" data-asset="hero-avatar-3">
+                <img src="assets/image/hero-avatar-3.png" width="48" height="48" alt="">
+              </span>
+              <span class="avatar" data-asset="hero-avatar-4">
+                <img src="assets/image/hero-avatar-4.png" width="48" height="48" alt="">
+              </span>
+            </div>
+            <p class="social-proof__text">Система проверена на 100+ аккаунтов</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="video-preview" data-video="hero">
+          <img class="video-preview__cover" src="assets/image/hero.png" width="476" height="876"
+            alt="Превью видео-приветствия" data-asset="hero-video-cover" loading="eager" />
+          <button type="button" class="video-preview__play" aria-label="Воспроизвести видео">
+            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
+              <path
+                d="M11.5 0C5.152 0 0 5.152 0 11.5C0 17.848 5.152 23 11.5 23C17.848 23 23 17.848 23 11.5C23 5.152 17.848 0 11.5 0ZM14.559 13.4895L13.087 14.3405L11.615 15.1915C9.7175 16.284 8.165 15.387 8.165 13.202V11.5V9.798C8.165 7.6015 9.7175 6.716 11.615 7.8085L13.087 8.6595L14.559 9.5105C16.4565 10.603 16.4565 12.397 14.559 13.4895Z"
+                fill="#F3F3F3" fill-opacity="0.75" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============== 2. КАК РАБОТАЕТ СИСТЕМА — 4 шага =============== -->
+  <section class="section section--steps">
+    <span class="section__divider" aria-hidden="true"></span>
+    <span class="bg-shape bg-shape--left" aria-hidden="true">
+      <img src="assets/image/steps-bg.png" width="1920" height="1080" alt="">
+    </span>
+
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Вам интересно узнать...</p>
+        <h2 class="section__title section__title--big">Как работает система</h2>
+        <p class="section__subtitle">
+          По которой делаются Reels, которые с высокой вероятностью залетают на 100 тыс+ и приводят клиентов
+        </p>
+      </div>
+
+      <ol class="steps">
+        <!-- Step 1 -->
+        <li class="steps__item">
+          <div class="steps__marker">
+            <span class="steps__circle">1</span>
+            <span class="steps__divider-v" aria-hidden="true"></span>
+          </div>
+          <p class="steps__text">
+            Берем 30+ аккаунтов и выгружаем весь их <span class="text-gradient">контент в таблицу</span>
+          </p>
+          <div class="steps__media">
+            <img class="steps__img" src="assets/image/steps__img1.png" width="357" height="230"
+              alt="Скриншот таблицы с контентом конкурентов" data-asset="step-1-table" loading="lazy" />
+            <span class="steps__handwriting steps__handwriting--bottom-right">
+              <img src="assets/image/steps__handwriting1.svg" alt="Контент конкурентов">
+              Контент конкурентов</span>
+          </div>
+        </li>
+
+        <!-- Step 2 (reverse) -->
+        <li class="steps__item steps__item--reverse">
+          <div class="steps__marker">
+            <span class="steps__circle">2</span>
+            <span class="steps__divider-v" aria-hidden="true"></span>
+          </div>
+          <p class="steps__text">
+            Анализируем их <span class="text-gradient">ТОП-100</span><br />залетевших видео
+          </p>
+          <div class="steps__media">
+            <span class="steps__handwriting steps__handwriting--top-right">Просмотры
+              <img src="assets/image/steps__handwriting2.svg" alt="Контент конкурентов">
+            </span>
+            <img class="steps__img" src="assets/image/steps__img2.png" width="357" height="230"
+              alt="Скриншот таблицы с просмотрами конкурентов" data-asset="step-2-views" loading="lazy" />
+            <span class="steps__handwriting steps__handwriting--bottom-left">
+              <img src="assets/image/steps__handwriting3.svg" alt="Контент конкурентов">
+              Конкуренты</span>
+          </div>
+        </li>
+
+        <!-- Step 3 -->
+        <li class="steps__item">
+          <div class="steps__marker">
+            <span class="steps__circle">3</span>
+            <span class="steps__divider-v" aria-hidden="true"></span>
+          </div>
+          <p class="steps__text">
+            Выбираем лучшее по <span class="text-gradient">пошаговому алгоритму</span>
+          </p>
+          <div class="steps__media steps__media--reels-stack">
+            <div class="reels-stack" aria-label="Примеры залетевших Reels">
+              <div class="reels-stack__card" data-asset="step-3-reels-1">
+                <img src="assets/image/reels-stack__card1.png" width="102" height="175" loading="lazy" alt="">
+              </div>
+              <div class="reels-stack__card" data-asset="step-3-reels-2">
+                <img src="assets/image/reels-stack__card2.png" width="102" height="175" loading="lazy" alt="">
+              </div>
+              <div class="reels-stack__card" data-asset="step-3-reels-3">
+                <img src="assets/image/reels-stack__card3.png" width="102" height="175" loading="lazy" alt="">
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <!-- Step 4 -->
+        <li class="steps__item steps__item--narrow">
+          <div class="steps__marker">
+            <span class="steps__circle">4</span>
+          </div>
+          <p class="steps__text">
+            Выбираем <span class="text-gradient">самые простые форматы</span> и сценарии,
+            редактируем под себя, переснимаем и получаем клиентов
+          </p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- =============== 3. ПРИМЕР ПОШАГОВОГО АЛГОРИТМА =============== -->
+  <section class="section section--example">
+    <span class="section__divider" aria-hidden="true"></span>
+    <span class="section__divider-img">
+      <img src="assets/image/section__divider.png" width="1920" height="714" alt="">
+    </span>
+    <div class="container">
+      <header class="section__header">
+        <p class="section__eyebrow">Многие думают, что залеты — это случайность...</p>
+        <h2 class="section__title section__title--big">Как работает система</h2>
+      </header>
+
+      <div class="stats-collage">
+        <div class="stats-card stats-card--main" data-asset="stats-main" role="img"
+          aria-label="Скриншот статистики профиля">
+          <img src="assets/image/stats-main.jpg" width="375" height="626" alt="">
+        </div>
+        <div class="stats-card stats-card--side" data-asset="stats-side" role="img"
+          aria-label="Скриншот прироста подписчиков">
+          <p class="stats-card-text">
+            Результат
+            <img src="assets/image/stats-card-text.svg" width="33" height="64px" alt="">
+          </p>
+          <img src="assets/image/stats-main2.jpg" width="375" height="276" alt="">
+        </div>
+      </div>
+
+      <p class="section__footer-text">
+        <span class="text-gradient">Пример того, что может сделать<br />
+          ПОШАГОВЫЙ алгоритм с твоим блогом</span>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =============== 4. REELS НЕ ЗАЛЕТАЮТ ПО ОДНОЙ ПРИЧИНЕ =============== -->
+  <section class="section section--why">
+    <span class="section__divider" aria-hidden="true"></span>
+    <span class="bg-shape bg-shape--right" aria-hidden="true">
+      <img src="assets/image/section--why1.png" width="1920" height="1000" loading="lazy" alt="">
+    </span>
+
+    <div class="container container--mid">
+      <h2 class="section__title section__title--big">
+        <span class="text-gradient-pink">Reels не залетают </span> по одной причине...
+      </h2>
+      <div class="section--why-bxo">
+        <p class="section__paragraph">
+          Пытаешься угадать, что «зайдет», вместо того чтобы проектировать результат
+        </p>
+        <p>
+          Есть четкий маршрут, который дает результат сейчас...
+        </p>
+      </div>
+
+      <span class="section__divider section__divider2" aria-hidden="true"></span>
+
+      <h3 class="section__title section__title--big">Западный алгоритм системного роста</h3>
+
+      <div class="brand-pill">REELS BOOSTER</div>
+
+      <p class="section__paragraph section__paragraph2">
+        Прямо сейчас, в 2026 году, мы проживаем пик вертикального контента. Никогда раньше Reels не давали такого
+        мощного рычага для роста бизнеса. Этот навык сегодня — не просто бонус, а обязательное условие выживания личного
+        бренда
+      </p>
+
+      <div class="phones-collage">
+        <div class="phone-mock" data-asset="phone-1">
+          <img src="assets/image/phone-mock1.jpg" width="511" height="885" loading="lazy" alt="">
+        </div>
+        <div class="phone-mock phone-mock--right" data-asset="phone-2">
+          <img src="assets/image/phone-mock2.jpg" width="374" height="646" loading="lazy" alt="">
+        </div>
+      </div>
+
+      <h3 class="section__title section__title--small">Вот как он работает:</h3>
+
+      <ol class="how-list">
+        <li class="how-list__item how-list__item1"><span class="how-list__num">1</span>
+          <p>Получаете огромную выборку <br> залетевших видео</p>
+        </li>
+        <li class="how-list__item how-list__item2"><span class="how-list__num">2</span>
+          <p>Снимаете <br> на похожие темы</p>
+        </li>
+        <li class="how-list__item how-list__item3"><span class="how-list__num">3</span>
+          <p>Улучшаете <br> результативные формат</p>
+        </li>
+        <li class="how-list__item how-list__item--final">
+          <span class="how-list__num how-list__num--big">4</span>
+          <p class="text-gradient-pink">Получаете миллионный охват и запросы на сотрудничество</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- =============== 5. ТРИ СПОСОБА ПРОДВИГАТЬСЯ =============== -->
+  <section class="section section--ways">
+    <span class="section__divider" aria-hidden="true"></span>
+    <div class="container container--mid">
+      <h2 class="section__title section__title--big">
+        У вас есть несколько способов продвигаться <span class="text-accent-blue">в Reels</span>
+      </h2>
+
+      <div class="ways">
+        <article class="way-card">
+          <p>Придумывать сценарии самому, пытаясь угадать что сработает, тратя неадекватное количество времени и нервов.
+          </p>
+        </article>
+        <div class="way-or">или</div>
+        <article class="way-card">
+          <p>Украсть залетевшое видео, получить негатив от аудитории, сообщение от автора</p>
+        </article>
+        <div class="way-or">или</div>
+        <article class="way-card way-card--accent">
+          <p>Взять вирусное видео, понять факторы и триггеры залета и переснять его по своему сценарию. Это кратчайший
+            путь к предсказуемому результату</p>
+        </article>
+      </div>
+
+      <h3 class="section__title section__title--small">
+        Это позволяет создавать видео с вашим сценарием, работающие по четкому алгоритму гарантированного роста трафика
+        и заявок!
+      </h3>
+      <p class="section__paragraph">
+        Их можно использовать повторные: это «золотые видео», работающие в режиме 24/7. Вам достаточно иметь 3–5 таких
+        единиц контента, чтобы обеспечить себе стабильный приток аудитории.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =============== 6. РЕЗУЛЬТАТ =============== -->
+  <section class="section section--result">
+    <span class="section__divider" aria-hidden="true"></span>
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title section__title--huge text-gradient">Результат</h2>
+        <p class="section__subtitle">
+          Понимание форматов и принципов работы платформ позволяет отказаться от «угадывания» и точно прогнозировать
+          охваты
+        </p>
+      </header>
+
+      <div class="result-grid">
+        <div class="result-pair result-pair--triple result-pair--triple1">
+          <div class="reel-card" data-asset="result-3a">
+            <img src="assets/image/result1.png" width="358" height="636" loading="lazy" alt="">
+          </div>
+          <div class="reel-card" data-asset="result-3b">
+            <img src="assets/image/result2.png" width="358" height="636" loading="lazy" alt="">
+          </div>
+          <div class="reel-card" data-asset="result-3c">
+            <img src="assets/image/result3.png" width="358" height="636" loading="lazy" alt="">
+          </div>
+        </div>
+        <div class="result-pair result-pair--triple2">
+          <div class="reel-card" data-asset="result-1a">
+            <img src="assets/image/result4.png" width="474" height="842" loading="lazy" alt="">
+          </div>
+          <div class="reel-card" data-asset="result-1b">
+            <img src="assets/image/result5.png" width="474" height="842" loading="lazy" alt="">
+          </div>
+        </div>
+        <div class="result-pair result-pair--triple result-pair--triple3">
+          <div class="reel-card" data-asset="result-3a">
+            <img src="assets/image/result6.png" width="358" height="636" loading="lazy" alt="">
+          </div>
+          <div class="reel-card" data-asset="result-3b">
+            <img src="assets/image/result7.png" width="358" height="636" loading="lazy" alt="">
+          </div>
+          <div class="reel-card" data-asset="result-3c">
+            <img src="assets/image/result8.png" width="358" height="636" loading="lazy" alt="">
+          </div>
+        </div>
+        <div class="result-pair result-pair--triple4">
+          <div class="reel-card" data-asset="result-4a">
+            <img src="assets/image/result9.png" width="474" height="842" loading="lazy" alt="">
+          </div>
+          <div class="reel-card" data-asset="result-4b">
+            <img src="assets/image/result10.png" width="474" height="842" loading="lazy" alt="">
+          </div>
+        </div>
+        <div class="result-pair result-pair--triple5">
+          <div class="reel-card" data-asset="result-5a">
+            <img src="assets/image/result11.png" width="474" height="842" loading="lazy" alt="">
+          </div>
+          <div class="reel-card" data-asset="result-5b">
+            <img src="assets/image/result12.png" width="474" height="842" loading="lazy" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============== 7. ПРОГРАММА ПРАКТИКУМА =============== -->
+  <section class="section section--program" id="program">
+    <span class="section__divider" aria-hidden="true"></span>
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title section__title--huge">Программа практикума</h2>
+        <p class="section__title section__title--big text-gradient-vert">Что ждет вас внутри каждого модуля...</p>
+        <p class="section__subtitle">Полный набор инструментов для системного роста блога</p>
+      </header>
+
+      <div class="program-tabs" data-tabs>
+        <div class="program-tabs__nav" role="tablist" aria-label="Модули программы">
+          <button type="button" class="program-tab" role="tab" aria-selected="true" data-tab="m1">Модуль 1</button>
+          <button type="button" class="program-tab" role="tab" aria-selected="false" data-tab="m2">Модуль 2</button>
+          <button type="button" class="program-tab" role="tab" aria-selected="false" data-tab="m3">Модуль 3</button>
+          <button type="button" class="program-tab" role="tab" aria-selected="false" data-tab="m4">Модуль 4</button>
+          <button type="button" class="program-tab" role="tab" aria-selected="false" data-tab="bonus">Бонусы</button>
+        </div>
+
+        <!-- Модуль 1 -->
+        <div class="program-panel" role="tabpanel" data-panel="m1">
+          <div class="program-panel__main">
+            <h3 class="program-panel__title">Упаковка аккаунта и механика ускоренных продаж</h3>
+            <div class="program-panel__media" data-asset="program-m1-image">
+              <img src="assets/image/program-panel1.jpg" width="652" height="400" alt="Превью модуля 1"
+                loading="lazy" />
+            </div>
+            <div class="program-panel__details-header">
+              <h4 class="program-panel__details-title">Что будет внутри:</h4>
+              <span class="program-panel__divider" aria-hidden="true"></span>
+            </div>
+            <p class="program-panel__body">
+              За 3 дня вы проведешь полную упаковку профиля по западным стандартам. Создадите структуру для системного
+              притяжения целевого трафика и внедрите контент, который начнет приносить продажи с текущей базы
+              подписчиков.
+            </p>
+          </div>
+
+          <aside class="program-panel__lessons">
+            <h4 class="program-panel__lessons-title">Что будет внутри:</h4>
+            <ul class="lessons">
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 1: </span>Упаковка
+                      аккаунта под продажи</span><span class="lesson-item__icon" aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание урока. Замените разработчиком.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 2: </span>Платформы и
+                      алгоритмы — как сделать так, чтобы контент работал везде</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание урока.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 3: </span>Публикация —
+                      частота, время и контент-план</span><span class="lesson-item__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="lesson-item__body">Описание урока.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 4: </span>Trial Reels —
+                      как тестировать контент без риска для охватов</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание урока.</div>
+                </details>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- Модуль 2 -->
+        <div class="program-panel" role="tabpanel" data-panel="m2" hidden>
+          <div class="program-panel__main">
+            <h3 class="program-panel__title">Западный алгоритм Reels для стабильного привлечения клиентов</h3>
+            <div class="program-panel__media" data-asset="program-m2-image">
+              <img src="assets/image/program-panel2.jpg" width="652" height="400" alt="Превью модуля 2"
+                loading="lazy" />
+            </div>
+            <div class="program-panel__details-header">
+              <h4 class="program-panel__details-title">Что будет внутри:</h4>
+              <span class="program-panel__divider" aria-hidden="true"></span>
+            </div>
+            <p class="program-panel__body">За 4-5 дней создадите 15 сценариев с высоким коэффициентом виральности.
+              Получите алгоритм «предсказуемого охвата», созданный под свою нишу на основе анализа ТОП-ов рынка и
+              актуальных алгоритмов 2026 года.</p>
+          </div>
+          <aside class="program-panel__lessons">
+            <h4 class="program-panel__lessons-title">Что будет внутри:</h4>
+            <ul class="lessons">
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 1: </span>Система из 8
+                      шагов — как снимать видео, которые залетают, а не угадывать</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 2: </span>Парсинг — как
+                      находить идеи, которые уже доказали свою работу</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 3: </span>Факторы — что
+                      реально влияет на охват и как этим управлять</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- Модуль 3 -->
+        <div class="program-panel" role="tabpanel" data-panel="m3" hidden>
+          <div class="program-panel__main">
+            <h3 class="program-panel__title">Сценарии, съемка и монтаж для просмотров на 100+ тыс просмотров</h3>
+            <div class="program-panel__media" data-asset="program-m3-image">
+              <img src="assets/image/program-panel2.jpg" width="652" height="400" alt="Превью модуля 2"
+                loading="lazy" />
+            </div>
+            <div class="program-panel__details-header">
+              <h4 class="program-panel__details-title">Что будет внутри:</h4>
+              <span class="program-panel__divider" aria-hidden="true"></span>
+            </div>
+            <p class="program-panel__body">Производство эффективных роликов по четкой схеме удержания внимания. Без
+              дорогого оборудования вы создадите контент, логика которого настроена на охват.</p>
+          </div>
+          <aside class="program-panel__lessons">
+            <h4 class="program-panel__lessons-title">Что будет внутри:</h4>
+            <ul class="lessons">
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 1: </span>Сценарий — от
+                      идеи до готового текста</span><span class="lesson-item__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 2: </span>Съёмка — как
+                      снимать быстро и выглядеть хорошо в кадре</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 3: </span>Монтаж — как
+                      собрать видео, которое досматривают до конца</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Бонус: </span>Автопостинг в
+                      YouTube и Pinterest через Make</span><span class="lesson-item__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- Модуль 4 -->
+        <div class="program-panel" role="tabpanel" data-panel="m4" hidden>
+          <div class="program-panel__main">
+            <h3 class="program-panel__title">Создание воронки, которая продает с минимальными просмотрами</h3>
+            <div class="program-panel__media" data-asset="program-m4-image">
+              <img src="assets/image/program-panel2.jpg" width="652" height="400" alt="Превью модуля 2"
+                loading="lazy" />
+            </div>
+            <div class="program-panel__details-header">
+              <h4 class="program-panel__details-title">Что будет внутри:</h4>
+              <span class="program-panel__divider" aria-hidden="true"></span>
+            </div>
+            <p class="program-panel__body">Производство эффективных роликов по четкой схеме удержания внимания. Без
+              дорогого оборудования вы создадите контент, логика которого настроена на охват.</p>
+          </div>
+          <aside class="program-panel__lessons">
+            <h4 class="program-panel__lessons-title">Что будет внутри:</h4>
+            <ul class="lessons">
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 1: </span>Воронка — как
+                      выстроить путь от просмотра до покупки</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 2: </span>Сборка воронки с
+                      нуля — пошагово за 30 минут</span><span class="lesson-item__icon" aria-hidden="true">+</span>
+                  </summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+              <li class="lesson-item">
+                <details>
+                  <summary><span class="lesson-item__txt"><span class="lesson-item__num">Урок 3: </span>Технические
+                      настройки воронки — без головной боли и программирования</span><span class="lesson-item__icon"
+                      aria-hidden="true">+</span></summary>
+                  <div class="lesson-item__body">Описание.</div>
+                </details>
+              </li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- Бонусы -->
+        <div class="program-panel program-panel--bonuses" role="tabpanel" data-panel="bonus" hidden>
+          <h4 class="program-panel__lessons-title">Что будет внутри:</h4>
+          <ul class="lessons">
+            <li class="lesson-item">
+              <details>
+                <summary><span class="lesson-item__txt"><span class="lesson-item__num lesson-item__num--bonus">Бонус 1:
+                    </span>База форматов Reels с живыми примерами</span><span class="lesson-item__icon"
+                    aria-hidden="true">+</span></summary>
+                <div class="lesson-item__body">Описание.</div>
+              </details>
+            </li>
+            <li class="lesson-item">
+              <details>
+                <summary><span class="lesson-item__txt"><span class="lesson-item__num lesson-item__num--bonus">Бонус 2:
+                    </span>Как хранить материалы для монтажёра — чтобы не искать файлы по всем чатам</span><span
+                    class="lesson-item__icon" aria-hidden="true">+</span></summary>
+                <div class="lesson-item__body">Описание.</div>
+              </details>
+            </li>
+            <li class="lesson-item">
+              <details>
+                <summary><span class="lesson-item__txt"><span class="lesson-item__num lesson-item__num--bonus">Бонус 3:
+                    </span>Мини-курс по свету — как выглядеть хорошо в кадре без студийного оборудования</span><span
+                    class="lesson-item__icon" aria-hidden="true">+</span></summary>
+                <div class="lesson-item__body">Описание.</div>
+              </details>
+            </li>
+            <li class="lesson-item">
+              <details>
+                <summary><span class="lesson-item__txt"><span class="lesson-item__num lesson-item__num--bonus">Бонус 4:
+                    </span>Организация работы в Notion — шаблон из личной практики</span><span class="lesson-item__icon"
+                    aria-hidden="true">+</span></summary>
+                <div class="lesson-item__body">Описание.</div>
+              </details>
+            </li>
+            <li class="lesson-item">
+              <details>
+                <summary><span class="lesson-item__txt"><span class="lesson-item__num lesson-item__num--bonus">Бонус 5:
+                    </span>14 дней бесплатного доступа к ManyChat</span><span class="lesson-item__icon"
+                    aria-hidden="true">+</span></summary>
+                <div class="lesson-item__body">Описание.</div>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============== 8. ГАРАНТИЯ 100% =============== -->
+  <section class="section section--guarantee">
+    <span class="section__divider" aria-hidden="true"></span>
+    <div class="container container--mid">
+      <div class="guarantee-badge">ГАРАНТИЯ 100%</div>
+
+      <h2 class="section__title section__title--big">
+        Тестируйте систему без риска<br />
+        <span class="text-gradient-pink">в течении 14 дней!</span>
+      </h2>
+
+      <p class="section__paragraph">
+        Присоединяйтесь к курсу прямо сейчас и будет достаточно времени, чтобы убедиться в силе метода. Если в течение
+        первых 14 дней вы поймете, что система не подходит —верну всю сумму без лишних вопросов.
+      </p>
+
+      <div class="section--guarante__paragraph">
+        <a href="#tariffs" class="btn btn--ghost-pink" data-product="guarantee-cta">Просмотры или х2 возврат</a>
+      </div>
+
+      <p class="section__paragraph section__paragraph--small">
+        Ваш главный риск — это время, поэтому даю обещание: если внедренная система не принесет вам хотя бы 100 000
+        просмотров за 30 дней, я не просто верну оплату, а выплачу вам в два раза больше.
+      </p>
+    </div>
+  </section>
+
+  <!-- =============== 10. ТАРИФЫ =============== -->
+  <section class="section section--tariffs" id="tariffs">
+    <span class="section__divider" aria-hidden="true"></span>
+    <div class="container">
+      <header class="section__header">
+        <h2 class="section__title section__title--big">Выбери свой тариф</h2>
+      </header>
+
+      <div class="tariffs">
+        <!-- ПРОБУЮ -->
+        <article class="tariff">
+          <div class="tariff__badge tariff__badge--violet">ПРОБУЮ</div>
+          <p class="tariff__type">Самостоятельный формат</p>
+
+          <div>
+            <h3 class="tariff__heading">НАПОЛНЕНИЕ</h3>
+            <ul class="tariff__modules">
+              <li><span class="tariff__module-num">Модуль 1:</span> Упаковка аккаунта и механика ускоренных продаж</li>
+              <li><span class="tariff__module-num">Модуль 2:</span> Западный алгоритм Reels для стабильного привлечения
+                клиентов</li>
+              <li class="is-disabled"><span class="tariff__module-num">Модуль 3:</span> Сценарии, съемка и монтаж для
+                просмотров на 100+ тыс</li>
+              <li class="is-disabled"><span class="tariff__module-num">Модуль 4:</span> Создание воронки, которая
+                продает с минимальными просмотрами</li>
+              <li class="is-disabled"><span class="tariff__module-num">Бонусы</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="tariff__heading">ЧТО ВНУТРИ</h3>
+            <ul class="tariff__features">
+              <li>Доступ к урокам 3 мес</li>
+              <li class="is-disabled">Автопостинг в YouTube, Pinterest</li>
+              <li class="is-disabled">Разбор стратегии блога</li>
+            </ul>
+          </div>
+
+          <div class="tariff__price">
+            <span class="tariff__price-old">$59</span>
+            <span class="tariff__price-new">$35</span>
+          </div>
+          <a href="#" class="btn btn--pink" data-product="tariff-probyu" data-price="35">Купить</a>
+          <p class="tariff__pay-note">Оплата в USDT<br />Будете перенаправлены на платформу WayForPay для оплаты</p>
+          <ul class="tariff__bottom">
+            <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21"
+                  fill="none">
+                  <path
+                    d="M16.875 6.75H14.25V4.875C14.25 3.58207 13.7364 2.34209 12.8221 1.42785C11.9079 0.513615 10.6679 0 9.375 0C8.08207 0 6.84209 0.513615 5.92785 1.42785C5.01361 2.34209 4.5 3.58207 4.5 4.875V6.75H1.875C1.37772 6.75 0.900805 6.94754 0.549175 7.29917C0.197544 7.65081 0 8.12772 0 8.625V19.125C0 19.6223 0.197544 20.0992 0.549175 20.4508C0.900805 20.8025 1.37772 21 1.875 21H16.875C17.3723 21 17.8492 20.8025 18.2008 20.4508C18.5525 20.0992 18.75 19.6223 18.75 19.125V8.625C18.75 8.12772 18.5525 7.65081 18.2008 7.29917C17.8492 6.94754 17.3723 6.75 16.875 6.75ZM6.75 4.875C6.75 4.17881 7.02656 3.51113 7.51884 3.01884C8.01113 2.52656 8.67881 2.25 9.375 2.25C10.0712 2.25 10.7389 2.52656 11.2312 3.01884C11.7234 3.51113 12 4.17881 12 4.875V6.75H6.75V4.875ZM16.5 18.75H2.25V9H16.5V18.75ZM10.875 13.875C10.875 14.1717 10.787 14.4617 10.6222 14.7084C10.4574 14.955 10.2231 15.1473 9.94903 15.2608C9.67494 15.3744 9.37334 15.4041 9.08237 15.3462C8.79139 15.2883 8.52412 15.1454 8.31434 14.9357C8.10456 14.7259 7.9617 14.4586 7.90382 14.1676C7.84594 13.8767 7.87565 13.5751 7.98918 13.301C8.10271 13.0269 8.29497 12.7926 8.54165 12.6278C8.78832 12.463 9.07833 12.375 9.375 12.375C9.77282 12.375 10.1544 12.533 10.4357 12.8143C10.717 13.0956 10.875 13.4772 10.875 13.875Z"
+                    fill="#F3F3F3" />
+                </svg></span>100% безопасная сделка <br> ваши данные защищены</li>
+            <li><span class="check">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path
+                    d="M20.3203 8.25469C19.9903 7.91063 19.65 7.55531 19.5384 7.28625C19.4391 7.04625 19.4316 6.55219 19.425 6.11719C19.4109 5.17969 19.3931 4.01344 18.5644 3.18563C17.7356 2.35781 16.5703 2.34187 15.6328 2.325C15.1978 2.31844 14.7037 2.31094 14.4637 2.21156C14.1947 2.1 13.8394 1.75969 13.4953 1.42969C12.8316 0.793125 12.0047 0 10.875 0C9.74531 0 8.91844 0.793125 8.25469 1.42969C7.91063 1.75969 7.55531 2.1 7.28625 2.21156C7.04625 2.31094 6.55219 2.31844 6.11719 2.325C5.17969 2.34375 4.01344 2.35687 3.1875 3.1875C2.36156 4.01813 2.34375 5.17969 2.325 6.11719C2.31844 6.55219 2.31094 7.04625 2.21156 7.28625C2.1 7.55531 1.75969 7.91063 1.42969 8.25469C0.793125 8.91844 0 9.75 0 10.875C0 12 0.793125 12.8316 1.42969 13.5C1.75969 13.8441 2.1 14.1994 2.21156 14.4684C2.31094 14.7084 2.31844 15.2025 2.325 15.6375C2.33906 16.575 2.35687 17.7413 3.18563 18.5691C4.01437 19.3969 5.17969 19.4128 6.11719 19.4297C6.55219 19.4363 7.04625 19.4438 7.28625 19.5431C7.55531 19.6547 7.91063 19.995 8.25469 20.325C8.91844 20.9569 9.75 21.75 10.875 21.75C12 21.75 12.8316 20.9569 13.4953 20.3203C13.8394 19.9903 14.1947 19.65 14.4637 19.5384C14.7037 19.4391 15.1978 19.4316 15.6328 19.425C16.5703 19.4109 17.7366 19.3931 18.5644 18.5644C19.3922 17.7356 19.4081 16.5703 19.425 15.6328C19.4316 15.1978 19.4391 14.7037 19.5384 14.4637C19.65 14.1947 19.9903 13.8394 20.3203 13.4953C20.9569 12.8316 21.75 12.0047 21.75 10.875C21.75 9.74531 20.9569 8.91844 20.3203 8.25469ZM18.6966 11.9381C18.2447 12.4069 17.7328 12.9431 17.46 13.6031C17.1956 14.2406 17.1853 14.9306 17.1788 15.5991C17.1713 16.1016 17.1609 16.7906 16.9772 16.9734C16.7934 17.1562 16.1053 17.1675 15.6028 17.175C14.9344 17.1853 14.2444 17.1956 13.6069 17.4562C12.9506 17.7291 12.4134 18.2409 11.9419 18.6928C11.6044 19.0163 11.1 19.5 10.875 19.5C10.65 19.5 10.1456 19.0162 9.81188 18.6966C9.34313 18.2447 8.80688 17.7328 8.14688 17.46C7.50938 17.1956 6.81938 17.1853 6.15094 17.1788C5.64844 17.1713 4.95937 17.1609 4.77656 16.9772C4.59375 16.7934 4.5825 16.1053 4.575 15.6028C4.56469 14.9344 4.55437 14.2444 4.29375 13.6069C4.02094 12.9506 3.50906 12.4134 3.05719 11.9419C2.73375 11.6044 2.25 11.1 2.25 10.875C2.25 10.65 2.73375 10.1456 3.05344 9.81188C3.50531 9.34313 4.01719 8.80688 4.29 8.14688C4.55437 7.50938 4.56469 6.81938 4.57125 6.15094C4.5825 5.64844 4.59375 4.95937 4.78125 4.78125C4.96875 4.60313 5.65313 4.58719 6.15563 4.57969C6.82406 4.56938 7.51406 4.55906 8.15156 4.29844C8.80781 4.02562 9.345 3.51375 9.81656 3.06187C10.1456 2.73375 10.65 2.25 10.875 2.25C11.1 2.25 11.6044 2.73375 11.9381 3.05344C12.4069 3.50531 12.9431 4.01719 13.6031 4.29C14.2406 4.55437 14.9306 4.56469 15.5991 4.57125C16.1016 4.57875 16.7906 4.58906 16.9734 4.77281C17.1562 4.95656 17.1675 5.64469 17.175 6.14719C17.1853 6.81563 17.1956 7.50563 17.4562 8.14313C17.7291 8.79938 18.2409 9.33656 18.6928 9.80813C19.0125 10.1419 19.4963 10.6462 19.4963 10.8713C19.4963 11.0962 19.0162 11.6044 18.6966 11.9381ZM15.4209 7.82906C15.5258 7.93358 15.609 8.05777 15.6658 8.19452C15.7226 8.33126 15.7518 8.47787 15.7518 8.62594C15.7518 8.774 15.7226 8.92061 15.6658 9.05736C15.609 9.1941 15.5258 9.3183 15.4209 9.42281L10.1709 14.6728C10.0664 14.7777 9.94223 14.8609 9.80548 14.9177C9.66874 14.9745 9.52213 15.0037 9.37406 15.0037C9.226 15.0037 9.07939 14.9745 8.94264 14.9177C8.8059 14.8609 8.6817 14.7777 8.57719 14.6728L6.32719 12.4228C6.22254 12.3182 6.13953 12.1939 6.0829 12.0572C6.02626 11.9205 5.99711 11.7739 5.99711 11.6259C5.99711 11.4779 6.02626 11.3314 6.0829 11.1947C6.13953 11.0579 6.22254 10.9337 6.32719 10.8291C6.43183 10.7244 6.55607 10.6414 6.6928 10.5848C6.82952 10.5281 6.97607 10.499 7.12406 10.499C7.27206 10.499 7.4186 10.5281 7.55533 10.5848C7.69206 10.6414 7.81629 10.7244 7.92094 10.8291L9.375 12.2812L13.8291 7.82625C13.9337 7.72184 14.058 7.63908 14.1946 7.5827C14.3313 7.52633 14.4777 7.49745 14.6256 7.49771C14.7734 7.49797 14.9198 7.52737 15.0562 7.58422C15.1927 7.64108 15.3166 7.72428 15.4209 7.82906Z"
+                    fill="#F3F3F3" />
+                </svg>
+              </span> Гарантия 14 дней или вернём деньги</li>
+          </ul>
+        </article>
+
+        <!-- ДЕЛАЮ -->
+        <article class="tariff">
+          <div class="tariff__badge tariff__badge--purple">ДЕЛАЮ</div>
+          <p class="tariff__type">Самостоятельный формат</p>
+
+          <div>
+            <h3 class="tariff__heading">НАПОЛНЕНИЕ</h3>
+            <ul class="tariff__modules">
+              <li><span class="tariff__module-num">Модуль 1:</span> Упаковка аккаунта и механика ускоренных продаж</li>
+              <li><span class="tariff__module-num">Модуль 2:</span> Западный алгоритм Reels для стабильного привлечения
+                клиентов</li>
+              <li><span class="tariff__module-num">Модуль 3:</span> Сценарии, съемка и монтаж для просмотров на 100+ тыс
+              </li>
+              <li class="is-disabled"><span class="tariff__module-num">Модуль 4:</span> Создание воронки, которая
+                продает с минимальными просмотрами</li>
+              <li><span class="tariff__module-num">Бонусы</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="tariff__heading">ЧТО ВНУТРИ</h3>
+            <ul class="tariff__features">
+              <li>Доступ к урокам 3 мес</li>
+              <li>Автопостинг в YouTube, Pinterest</li>
+              <li class="is-disabled">Разбор стратегии блога</li>
+            </ul>
+          </div>
+
+          <div class="tariff__price">
+            <span class="tariff__price-old">$99</span>
+            <span class="tariff__price-new">$69</span>
+          </div>
+          <a href="#" class="btn btn--pink" data-product="tariff-delayu" data-price="69">Купить</a>
+          <p class="tariff__pay-note">Оплата в USDT<br />Будете перенаправлены на платформу WayForPay для оплаты</p>
+          <ul class="tariff__bottom">
+            <li><span class="check">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21" fill="none">
+                  <path
+                    d="M16.875 6.75H14.25V4.875C14.25 3.58207 13.7364 2.34209 12.8221 1.42785C11.9079 0.513615 10.6679 0 9.375 0C8.08207 0 6.84209 0.513615 5.92785 1.42785C5.01361 2.34209 4.5 3.58207 4.5 4.875V6.75H1.875C1.37772 6.75 0.900805 6.94754 0.549175 7.29917C0.197544 7.65081 0 8.12772 0 8.625V19.125C0 19.6223 0.197544 20.0992 0.549175 20.4508C0.900805 20.8025 1.37772 21 1.875 21H16.875C17.3723 21 17.8492 20.8025 18.2008 20.4508C18.5525 20.0992 18.75 19.6223 18.75 19.125V8.625C18.75 8.12772 18.5525 7.65081 18.2008 7.29917C17.8492 6.94754 17.3723 6.75 16.875 6.75ZM6.75 4.875C6.75 4.17881 7.02656 3.51113 7.51884 3.01884C8.01113 2.52656 8.67881 2.25 9.375 2.25C10.0712 2.25 10.7389 2.52656 11.2312 3.01884C11.7234 3.51113 12 4.17881 12 4.875V6.75H6.75V4.875ZM16.5 18.75H2.25V9H16.5V18.75ZM10.875 13.875C10.875 14.1717 10.787 14.4617 10.6222 14.7084C10.4574 14.955 10.2231 15.1473 9.94903 15.2608C9.67494 15.3744 9.37334 15.4041 9.08237 15.3462C8.79139 15.2883 8.52412 15.1454 8.31434 14.9357C8.10456 14.7259 7.9617 14.4586 7.90382 14.1676C7.84594 13.8767 7.87565 13.5751 7.98918 13.301C8.10271 13.0269 8.29497 12.7926 8.54165 12.6278C8.78832 12.463 9.07833 12.375 9.375 12.375C9.77282 12.375 10.1544 12.533 10.4357 12.8143C10.717 13.0956 10.875 13.4772 10.875 13.875Z"
+                    fill="#F3F3F3" />
+                </svg>
+              </span> 100% безопасная сделка <br> ваши данные защищены</li>
+            <li><span class="check">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path
+                    d="M20.3203 8.25469C19.9903 7.91063 19.65 7.55531 19.5384 7.28625C19.4391 7.04625 19.4316 6.55219 19.425 6.11719C19.4109 5.17969 19.3931 4.01344 18.5644 3.18563C17.7356 2.35781 16.5703 2.34187 15.6328 2.325C15.1978 2.31844 14.7037 2.31094 14.4637 2.21156C14.1947 2.1 13.8394 1.75969 13.4953 1.42969C12.8316 0.793125 12.0047 0 10.875 0C9.74531 0 8.91844 0.793125 8.25469 1.42969C7.91063 1.75969 7.55531 2.1 7.28625 2.21156C7.04625 2.31094 6.55219 2.31844 6.11719 2.325C5.17969 2.34375 4.01344 2.35687 3.1875 3.1875C2.36156 4.01813 2.34375 5.17969 2.325 6.11719C2.31844 6.55219 2.31094 7.04625 2.21156 7.28625C2.1 7.55531 1.75969 7.91063 1.42969 8.25469C0.793125 8.91844 0 9.75 0 10.875C0 12 0.793125 12.8316 1.42969 13.5C1.75969 13.8441 2.1 14.1994 2.21156 14.4684C2.31094 14.7084 2.31844 15.2025 2.325 15.6375C2.33906 16.575 2.35687 17.7413 3.18563 18.5691C4.01437 19.3969 5.17969 19.4128 6.11719 19.4297C6.55219 19.4363 7.04625 19.4438 7.28625 19.5431C7.55531 19.6547 7.91063 19.995 8.25469 20.325C8.91844 20.9569 9.75 21.75 10.875 21.75C12 21.75 12.8316 20.9569 13.4953 20.3203C13.8394 19.9903 14.1947 19.65 14.4637 19.5384C14.7037 19.4391 15.1978 19.4316 15.6328 19.425C16.5703 19.4109 17.7366 19.3931 18.5644 18.5644C19.3922 17.7356 19.4081 16.5703 19.425 15.6328C19.4316 15.1978 19.4391 14.7037 19.5384 14.4637C19.65 14.1947 19.9903 13.8394 20.3203 13.4953C20.9569 12.8316 21.75 12.0047 21.75 10.875C21.75 9.74531 20.9569 8.91844 20.3203 8.25469ZM18.6966 11.9381C18.2447 12.4069 17.7328 12.9431 17.46 13.6031C17.1956 14.2406 17.1853 14.9306 17.1788 15.5991C17.1713 16.1016 17.1609 16.7906 16.9772 16.9734C16.7934 17.1562 16.1053 17.1675 15.6028 17.175C14.9344 17.1853 14.2444 17.1956 13.6069 17.4562C12.9506 17.7291 12.4134 18.2409 11.9419 18.6928C11.6044 19.0163 11.1 19.5 10.875 19.5C10.65 19.5 10.1456 19.0162 9.81188 18.6966C9.34313 18.2447 8.80688 17.7328 8.14688 17.46C7.50938 17.1956 6.81938 17.1853 6.15094 17.1788C5.64844 17.1713 4.95937 17.1609 4.77656 16.9772C4.59375 16.7934 4.5825 16.1053 4.575 15.6028C4.56469 14.9344 4.55437 14.2444 4.29375 13.6069C4.02094 12.9506 3.50906 12.4134 3.05719 11.9419C2.73375 11.6044 2.25 11.1 2.25 10.875C2.25 10.65 2.73375 10.1456 3.05344 9.81188C3.50531 9.34313 4.01719 8.80688 4.29 8.14688C4.55437 7.50938 4.56469 6.81938 4.57125 6.15094C4.5825 5.64844 4.59375 4.95937 4.78125 4.78125C4.96875 4.60313 5.65313 4.58719 6.15563 4.57969C6.82406 4.56938 7.51406 4.55906 8.15156 4.29844C8.80781 4.02562 9.345 3.51375 9.81656 3.06187C10.1456 2.73375 10.65 2.25 10.875 2.25C11.1 2.25 11.6044 2.73375 11.9381 3.05344C12.4069 3.50531 12.9431 4.01719 13.6031 4.29C14.2406 4.55437 14.9306 4.56469 15.5991 4.57125C16.1016 4.57875 16.7906 4.58906 16.9734 4.77281C17.1562 4.95656 17.1675 5.64469 17.175 6.14719C17.1853 6.81563 17.1956 7.50563 17.4562 8.14313C17.7291 8.79938 18.2409 9.33656 18.6928 9.80813C19.0125 10.1419 19.4963 10.6462 19.4963 10.8713C19.4963 11.0962 19.0162 11.6044 18.6966 11.9381ZM15.4209 7.82906C15.5258 7.93358 15.609 8.05777 15.6658 8.19452C15.7226 8.33126 15.7518 8.47787 15.7518 8.62594C15.7518 8.774 15.7226 8.92061 15.6658 9.05736C15.609 9.1941 15.5258 9.3183 15.4209 9.42281L10.1709 14.6728C10.0664 14.7777 9.94223 14.8609 9.80548 14.9177C9.66874 14.9745 9.52213 15.0037 9.37406 15.0037C9.226 15.0037 9.07939 14.9745 8.94264 14.9177C8.8059 14.8609 8.6817 14.7777 8.57719 14.6728L6.32719 12.4228C6.22254 12.3182 6.13953 12.1939 6.0829 12.0572C6.02626 11.9205 5.99711 11.7739 5.99711 11.6259C5.99711 11.4779 6.02626 11.3314 6.0829 11.1947C6.13953 11.0579 6.22254 10.9337 6.32719 10.8291C6.43183 10.7244 6.55607 10.6414 6.6928 10.5848C6.82952 10.5281 6.97607 10.499 7.12406 10.499C7.27206 10.499 7.4186 10.5281 7.55533 10.5848C7.69206 10.6414 7.81629 10.7244 7.92094 10.8291L9.375 12.2812L13.8291 7.82625C13.9337 7.72184 14.058 7.63908 14.1946 7.5827C14.3313 7.52633 14.4777 7.49745 14.6256 7.49771C14.7734 7.49797 14.9198 7.52737 15.0562 7.58422C15.1927 7.64108 15.3166 7.72428 15.4209 7.82906Z"
+                    fill="#F3F3F3" />
+                </svg>
+              </span> Гарантия 14 дней или вернём деньги</li>
+          </ul>
+        </article>
+
+        <!-- ПРОДАЮ -->
+        <article class="tariff">
+          <div class="tariff__badge tariff__badge--blue">ПРОДАЮ</div>
+          <p class="tariff__type">Полный курс + <span class="text-accent-violet">разбор стратегии блога от
+              Ярослава</span></p>
+
+          <div>
+            <h3 class="tariff__heading">НАПОЛНЕНИЕ</h3>
+            <ul class="tariff__modules">
+              <li><span class="tariff__module-num">Модуль 1:</span> Упаковка аккаунта и механика ускоренных продаж</li>
+              <li><span class="tariff__module-num">Модуль 2:</span> Западный алгоритм Reels для стабильного привлечения
+                клиентов</li>
+              <li><span class="tariff__module-num">Модуль 3:</span> Сценарии, съемка и монтаж для просмотров на 100+ тыс
+              </li>
+              <li><span class="tariff__module-num">Модуль 4:</span> Создание воронки, которая продает с минимальными
+                просмотрами</li>
+              <li><span class="tariff__module-num">Бонусы</span></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="tariff__heading">ЧТО ВНУТРИ</h3>
+            <ul class="tariff__features">
+              <li>Доступ к урокам 3 мес</li>
+              <li>Автопостинг в YouTube, Pinterest</li>
+              <li>Разбор стратегии блога</li>
+            </ul>
+          </div>
+
+          <div class="tariff__price">
+            <span class="tariff__price-old">$249</span>
+            <span class="tariff__price-new">$150</span>
+          </div>
+          <a href="#" class="btn btn--pink" data-product="tariff-prodayu" data-price="150">Купить</a>
+          <p class="tariff__pay-note">Оплата в USDT<br />Будете перенаправлены на платформу WayForPay для оплаты</p>
+          <ul class="tariff__bottom">
+            <li><span class="check">
+                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21" fill="none">
+                  <path
+                    d="M16.875 6.75H14.25V4.875C14.25 3.58207 13.7364 2.34209 12.8221 1.42785C11.9079 0.513615 10.6679 0 9.375 0C8.08207 0 6.84209 0.513615 5.92785 1.42785C5.01361 2.34209 4.5 3.58207 4.5 4.875V6.75H1.875C1.37772 6.75 0.900805 6.94754 0.549175 7.29917C0.197544 7.65081 0 8.12772 0 8.625V19.125C0 19.6223 0.197544 20.0992 0.549175 20.4508C0.900805 20.8025 1.37772 21 1.875 21H16.875C17.3723 21 17.8492 20.8025 18.2008 20.4508C18.5525 20.0992 18.75 19.6223 18.75 19.125V8.625C18.75 8.12772 18.5525 7.65081 18.2008 7.29917C17.8492 6.94754 17.3723 6.75 16.875 6.75ZM6.75 4.875C6.75 4.17881 7.02656 3.51113 7.51884 3.01884C8.01113 2.52656 8.67881 2.25 9.375 2.25C10.0712 2.25 10.7389 2.52656 11.2312 3.01884C11.7234 3.51113 12 4.17881 12 4.875V6.75H6.75V4.875ZM16.5 18.75H2.25V9H16.5V18.75ZM10.875 13.875C10.875 14.1717 10.787 14.4617 10.6222 14.7084C10.4574 14.955 10.2231 15.1473 9.94903 15.2608C9.67494 15.3744 9.37334 15.4041 9.08237 15.3462C8.79139 15.2883 8.52412 15.1454 8.31434 14.9357C8.10456 14.7259 7.9617 14.4586 7.90382 14.1676C7.84594 13.8767 7.87565 13.5751 7.98918 13.301C8.10271 13.0269 8.29497 12.7926 8.54165 12.6278C8.78832 12.463 9.07833 12.375 9.375 12.375C9.77282 12.375 10.1544 12.533 10.4357 12.8143C10.717 13.0956 10.875 13.4772 10.875 13.875Z"
+                    fill="#F3F3F3" />
+                </svg>
+              </span> 100% безопасная сделка <br> ваши данные защищены</li>
+            <li><span class="check">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path
+                    d="M20.3203 8.25469C19.9903 7.91063 19.65 7.55531 19.5384 7.28625C19.4391 7.04625 19.4316 6.55219 19.425 6.11719C19.4109 5.17969 19.3931 4.01344 18.5644 3.18563C17.7356 2.35781 16.5703 2.34187 15.6328 2.325C15.1978 2.31844 14.7037 2.31094 14.4637 2.21156C14.1947 2.1 13.8394 1.75969 13.4953 1.42969C12.8316 0.793125 12.0047 0 10.875 0C9.74531 0 8.91844 0.793125 8.25469 1.42969C7.91063 1.75969 7.55531 2.1 7.28625 2.21156C7.04625 2.31094 6.55219 2.31844 6.11719 2.325C5.17969 2.34375 4.01344 2.35687 3.1875 3.1875C2.36156 4.01813 2.34375 5.17969 2.325 6.11719C2.31844 6.55219 2.31094 7.04625 2.21156 7.28625C2.1 7.55531 1.75969 7.91063 1.42969 8.25469C0.793125 8.91844 0 9.75 0 10.875C0 12 0.793125 12.8316 1.42969 13.5C1.75969 13.8441 2.1 14.1994 2.21156 14.4684C2.31094 14.7084 2.31844 15.2025 2.325 15.6375C2.33906 16.575 2.35687 17.7413 3.18563 18.5691C4.01437 19.3969 5.17969 19.4128 6.11719 19.4297C6.55219 19.4363 7.04625 19.4438 7.28625 19.5431C7.55531 19.6547 7.91063 19.995 8.25469 20.325C8.91844 20.9569 9.75 21.75 10.875 21.75C12 21.75 12.8316 20.9569 13.4953 20.3203C13.8394 19.9903 14.1947 19.65 14.4637 19.5384C14.7037 19.4391 15.1978 19.4316 15.6328 19.425C16.5703 19.4109 17.7366 19.3931 18.5644 18.5644C19.3922 17.7356 19.4081 16.5703 19.425 15.6328C19.4316 15.1978 19.4391 14.7037 19.5384 14.4637C19.65 14.1947 19.9903 13.8394 20.3203 13.4953C20.9569 12.8316 21.75 12.0047 21.75 10.875C21.75 9.74531 20.9569 8.91844 20.3203 8.25469ZM18.6966 11.9381C18.2447 12.4069 17.7328 12.9431 17.46 13.6031C17.1956 14.2406 17.1853 14.9306 17.1788 15.5991C17.1713 16.1016 17.1609 16.7906 16.9772 16.9734C16.7934 17.1562 16.1053 17.1675 15.6028 17.175C14.9344 17.1853 14.2444 17.1956 13.6069 17.4562C12.9506 17.7291 12.4134 18.2409 11.9419 18.6928C11.6044 19.0163 11.1 19.5 10.875 19.5C10.65 19.5 10.1456 19.0162 9.81188 18.6966C9.34313 18.2447 8.80688 17.7328 8.14688 17.46C7.50938 17.1956 6.81938 17.1853 6.15094 17.1788C5.64844 17.1713 4.95937 17.1609 4.77656 16.9772C4.59375 16.7934 4.5825 16.1053 4.575 15.6028C4.56469 14.9344 4.55437 14.2444 4.29375 13.6069C4.02094 12.9506 3.50906 12.4134 3.05719 11.9419C2.73375 11.6044 2.25 11.1 2.25 10.875C2.25 10.65 2.73375 10.1456 3.05344 9.81188C3.50531 9.34313 4.01719 8.80688 4.29 8.14688C4.55437 7.50938 4.56469 6.81938 4.57125 6.15094C4.5825 5.64844 4.59375 4.95937 4.78125 4.78125C4.96875 4.60313 5.65313 4.58719 6.15563 4.57969C6.82406 4.56938 7.51406 4.55906 8.15156 4.29844C8.80781 4.02562 9.345 3.51375 9.81656 3.06187C10.1456 2.73375 10.65 2.25 10.875 2.25C11.1 2.25 11.6044 2.73375 11.9381 3.05344C12.4069 3.50531 12.9431 4.01719 13.6031 4.29C14.2406 4.55437 14.9306 4.56469 15.5991 4.57125C16.1016 4.57875 16.7906 4.58906 16.9734 4.77281C17.1562 4.95656 17.1675 5.64469 17.175 6.14719C17.1853 6.81563 17.1956 7.50563 17.4562 8.14313C17.7291 8.79938 18.2409 9.33656 18.6928 9.80813C19.0125 10.1419 19.4963 10.6462 19.4963 10.8713C19.4963 11.0962 19.0162 11.6044 18.6966 11.9381ZM15.4209 7.82906C15.5258 7.93358 15.609 8.05777 15.6658 8.19452C15.7226 8.33126 15.7518 8.47787 15.7518 8.62594C15.7518 8.774 15.7226 8.92061 15.6658 9.05736C15.609 9.1941 15.5258 9.3183 15.4209 9.42281L10.1709 14.6728C10.0664 14.7777 9.94223 14.8609 9.80548 14.9177C9.66874 14.9745 9.52213 15.0037 9.37406 15.0037C9.226 15.0037 9.07939 14.9745 8.94264 14.9177C8.8059 14.8609 8.6817 14.7777 8.57719 14.6728L6.32719 12.4228C6.22254 12.3182 6.13953 12.1939 6.0829 12.0572C6.02626 11.9205 5.99711 11.7739 5.99711 11.6259C5.99711 11.4779 6.02626 11.3314 6.0829 11.1947C6.13953 11.0579 6.22254 10.9337 6.32719 10.8291C6.43183 10.7244 6.55607 10.6414 6.6928 10.5848C6.82952 10.5281 6.97607 10.499 7.12406 10.499C7.27206 10.499 7.4186 10.5281 7.55533 10.5848C7.69206 10.6414 7.81629 10.7244 7.92094 10.8291L9.375 12.2812L13.8291 7.82625C13.9337 7.72184 14.058 7.63908 14.1946 7.5827C14.3313 7.52633 14.4777 7.49745 14.6256 7.49771C14.7734 7.49797 14.9198 7.52737 15.0562 7.58422C15.1927 7.64108 15.3166 7.72428 15.4209 7.82906Z"
+                    fill="#F3F3F3" />
+                </svg>
+              </span> Гарантия 14 дней <br> или вернём деньги</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =============== 9. ДВЕ ГАРАНТИИ =============== -->
+  <section class="section section--two-guarantees">
+    <span class="section__divider" aria-hidden="true"></span>
+    <div class="container container--mid">
+      <h2 class="section__title section__title--big text-gradient-pink">
+        Я понимаю, что вы слышали про гарантии возврата.
+      </h2>
+      <p class="section__paragraph">
+        И что чаще всего это просто слова мелким шрифтом внизу страницы.<br />
+        Поэтому говорю прямо — у меня две гарантии. Реальные.
+      </p>
+
+      <h3 class="section__title section__title--big text-gradient-pink">Гарантия 1</h3>
+      <p class="section__paragraph">
+        — 14 дней. Купили, зашли внутрь, поняли что это не для вас — напишите мне. Верну деньги без вопросов и без обид.
+      </p>
+
+      <h3 class="section__title section__title--big text-gradient-pink">Гарантия 2</h3>
+      <p class="section__paragraph">
+        — результат или деньги назад. Прошли курс, сделали всё по системе, сняли минимум 50 видео — и охваты не выросли.
+        Верну деньги полностью. Почему 50 видео? Потому что система работает через регулярность. Одно видео — это не
+        тест. 50 видео по методологии — это честный результат.
+      </p>
+
+      <h3 class="section__title section__title2 section__title--big text-gradient-pink">
+        Единственное, что я не верну — это время. Поэтому если вы готовы работать, риска нет никакого.
+      </h3>
+    </div>
+  </section>
+
+
+  <!-- =============== 11. FAQ =============== -->
+  <section class="section section--faq" id="faq">
+    <span class="section__divider" aria-hidden="true"></span>
+    <div class="container container--mid">
+      <h2 class="section__title section__title--big">Вопрос/ответ</h2>
+
+      <ul class="faq">
+        <li class="faq__item">
+          <details>
+            <summary><span class="faq__txt"><span class="faq__num">У меня узкая и необычная ниша. Подойдет ли мне
+                  практикум?</span><span class="faq__icon" aria-hidden="true">+</span></summary>
+            <div class="faq__body">Да. Принципы создания и продвижения Reels универсальны и работают в любой нише. На
+              практикуме вы научитесь адаптировать формат под свою аудиторию и находить идеи даже в нестандартных темах.
+            </div>
+          </details>
+        </li>
+        <li class="faq__item">
+          <details>
+            <summary><span class="faq__txt"><span class="faq__num">Можно ли оплатить курс в рассрочку?</span><span
+                  class="faq__icon" aria-hidden="true">+</span></summary>
+            <div class="faq__body">Да, доступна оплата в рассрочку. Условия зависят от страны и способа оплаты —
+              уточняйте детали при регистрации.</div>
+          </details>
+        </li>
+        <li class="faq__item">
+          <details>
+            <summary><span class="faq__txt"><span class="faq__num">3. Как работает 14-дневная гарантия?</span><span
+                  class="faq__icon" aria-hidden="true">+</span></summary>
+            <div class="faq__body">Если в течение 14 дней вы понимаете, что курс вам не подходит, вы можете запросить
+              возврат средств. Мы оформим его без лишних вопросов.</div>
+          </details>
+        </li>
+        <li class="faq__item">
+          <details>
+            <summary><span class="faq__txt"><span class="faq__num">Я новичок, совсем нет опыта. Мне подойдет этот
+                  курс?</span><span class="faq__icon" aria-hidden="true">+</span></summary>
+            <div class="faq__body">Да, программа рассчитана в том числе на новичков. Все объясняется по шагам — от
+              базовых принципов до практики.</div>
+          </details>
+        </li>
+        <li class="faq__item">
+          <details>
+            <summary><span class="faq__txt"><span class="faq__num">Если у меня работа на полный день, я
+                  успею?</span><span class="faq__icon" aria-hidden="true">+</span></summary>
+            <div class="faq__body">Да. Материалы доступны в записи, и вы можете проходить их в удобном темпе. Достаточно
+              уделять обучению 1–2 часа в день.</div>
+          </details>
+        </li>
+        <li class="faq__item">
+          <details>
+            <summary><span class="faq__txt"><span class="faq__num">А я смогу начать зарабатывать на Reels прямо
+                  сейчас?</span><span class="faq__icon" aria-hidden="true">+</span></summary>
+            <div class="faq__body">Сразу — вряд ли. Но вы сможете быстро начать применять инструменты, набирать
+              просмотры и тестировать форматы. При регулярной практике первые результаты и доход вполне достижимы уже в
+              процессе обучения.</div>
+          </details>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <div class="footer__left">
+        <a href="/">
+          <img src="assets/image/footer-logo.svg" width="148" height="38" alt="">
+        </a>
+        <ul>
+          <li>
+            <a href="/">Договір-оферта</a>
+          </li>
+          <li>
+            <a href="/">Політика конфіденційності</a>
+          </li>
+        </ul>
+        <p>ФОП Шаповал Олена Сергіївна ІПН/ЄДРПОУ 3506006109 <a
+            href="mailto:shapoval.elenaa@gmail.com">shapoval.elenaa@gmail.com</a> <br>
+          © 2024 Весь контент доступний за ліцензієюCreative Commons Attribution 4.0 International license, якщо не
+          зазначено інше.</p>
+      </div>
+      <div class="footer__right">
+        <p>Платіжний сервіс надається платформою <a href="https://wayforpay.com" target="_blank"
+            rel="noopener noreferrer">wayforpay.com</a></p>
+        <ul>
+          <li>
+            <img src="assets/image/maney1.svg" width="100" height="20" alt="">
+          </li>
+          <li>
+            <img src="assets/image/Visa.svg" width="41" height="28" alt="">
+          </li>
+          <li>
+            <img src="assets/image/Mastercard.svg" width="41" height="28" alt="">
+          </li>
+          <li>
+            <img src="assets/image/GooglePay.svg" width="41" height="28" alt="">
+          </li>
+          <li>
+            <img src="assets/image/ApplePay.svg" width="41" height="28" alt="">
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bg">
+      <img src="assets/image/footer-bg.png" width="1920" height="auto" loading="lazy" alt="">
+    </div>
+  </footer>
+
+
+  <script src="./scripts.js" defer></script>
+</body>
+
+</html>
