@@ -1,0 +1,212 @@
+/* ============================================================
+   Thank You page — дополнительные стили
+   Основные токены и компоненты берутся из styles.css
+   ============================================================ */
+
+/* ── Общий лэйаут страницы ── */
+.ty-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 80px 48px;
+  position: relative;
+  overflow: hidden;
+  background: #101010;
+}
+
+/* фоновое радиальное свечение */
+.ty-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(55% 45% at 50% 40%,
+      rgba(170, 43, 142, 0.45) 0%,
+      rgba(91, 90, 255, 0.12) 50%,
+      transparent 80%);
+}
+
+.ty-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  text-align: center;
+  max-width: 600px;
+}
+
+/* ── Иконка чекмарк ── */
+.ty-icon {
+  width: 80px;
+  height: 80px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 48px rgba(170, 43, 142, 0.35);
+}
+
+.ty-icon svg {
+  width: 56px;
+  height: 56px;
+}
+
+/* ── Бейдж ── */
+.ty-badge {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+/* ── Заголовок ── */
+.ty-title {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: clamp(38px, 9vw, 64px);
+  line-height: 1.15;
+  color: var(--c-text);
+  margin: 0;
+}
+
+/* ── Подзаголовок ── */
+.ty-subtitle {
+  font-family: var(--ff-body);
+  font-size: clamp(18px, 4vw, 22px);
+  color: var(--c-text-75);
+  line-height: 1.45;
+  max-width: 480px;
+  margin: 0;
+}
+
+.ty-highlight {
+  display: inline-block;
+  background: linear-gradient(90deg, #FF831A 0%, #5B5AFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* ── Карточка «Что дальше?» ── */
+.ty-card {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 32px 24px;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.ty-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(255,131,26,0.4), rgba(91,90,255,0.4));
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.ty-card__title {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: clamp(20px, 4vw, 24px);
+  color: var(--c-text);
+  margin: 0 0 24px;
+  background: linear-gradient(90deg, #ffb1d3 0%, #aa2b8e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ── Шаги ── */
+.ty-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ty-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.ty-step__num {
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--c-text);
+  background: linear-gradient(135deg, #FF831A, #5B5AFF);
+  box-shadow: 0 4px 16px rgba(91, 90, 255, 0.35);
+}
+
+.ty-step__content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ty-step__content strong {
+  font-family: var(--ff-display);
+  font-weight: 700;
+  font-size: clamp(15px, 3vw, 17px);
+  color: var(--c-text);
+}
+
+.ty-step__content p {
+  font-family: var(--ff-body);
+  font-size: clamp(13px, 3vw, 15px);
+  color: var(--c-text-75);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ── Кнопка ── */
+.ty-btn {
+  max-width: 360px;
+  width: 100%;
+  font-size: clamp(16px, 3.5vw, 18px);
+  padding: 20px 32px;
+  border-radius: 14px;
+}
+
+/* ── Ссылка «назад» ── */
+.ty-back {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  color: var(--c-text-60);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.ty-back:hover {
+  color: var(--c-text);
+}
+
+/* ── Адаптив ── */
+@media (min-width: 768px) {
+  .ty-card {
+    padding: 40px 40px;
+  }
+}

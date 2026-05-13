@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Спасибо за покупку — Reels Booster</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Inter:wght@400;500;700&family=Manrope:wght@400;500;700;800&family=Oswald:wght@500;700&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./thank-you.css" />
+</head>
+
+<body>
+
+  <main class="ty-page">
+
+    <!-- фоновое свечение -->
+    <span class="ty-glow" aria-hidden="true"></span>
+
+    <div class="container ty-container">
+
+      <!-- иконка-чекмарк -->
+      <div class="ty-icon" aria-hidden="true">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="28" cy="28" r="27" stroke="url(#ty-circle-grad)" stroke-width="2"/>
+          <path d="M17 28.5L24.5 36L39 21" stroke="url(#ty-check-grad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          <defs>
+            <linearGradient id="ty-circle-grad" x1="0" y1="0" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF831A"/>
+              <stop offset="1" stop-color="#5B5AFF"/>
+            </linearGradient>
+            <linearGradient id="ty-check-grad" x1="17" y1="28" x2="39" y2="28" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#FF831A"/>
+              <stop offset="1" stop-color="#5B5AFF"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <!-- бейдж -->
+      <span class="badge ty-badge">REELS BOOSTER</span>
+
+      <!-- заголовок -->
+      <h1 class="ty-title">
+        Спасибо за покупку!
+      </h1>
+
+      <!-- подзаголовок -->
+      <p class="ty-subtitle">
+        Твоё место в практикуме <span class="ty-highlight">забронировано</span>
+      </p>
+
+      <!-- карточка с инструкцией -->
+      <div class="ty-card">
+        <h2 class="ty-card__title">Что дальше?</h2>
+        <ol class="ty-steps">
+          <li class="ty-step">
+            <span class="ty-step__num">1</span>
+            <div class="ty-step__content">
+              <strong>Проверь почту</strong>
+              <p>На указанный email придёт письмо с доступом к платформе в течение 15 минут</p>
+            </div>
+          </li>
+          <li class="ty-step">
+            <span class="ty-step__num">2</span>
+            <div class="ty-step__content">
+              <strong>Зайди в личный кабинет</strong>
+              <p>Все материалы уже ждут тебя внутри — начни с Модуля 1</p>
+            </div>
+          </li>
+          <li class="ty-step">
+            <span class="ty-step__num">3</span>
+            <div class="ty-step__content">
+              <strong>Вступи в чат участников</strong>
+              <p>Ссылка на закрытый Telegram-чат будет в первом письме</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <!-- кнопка -->
+      <a href="#" class="btn btn--pink ty-btn">Перейти в личный кабинет</a>
+
+      <!-- ссылка назад -->
+      <a href="./index.html" class="ty-back">← Вернуться на главную</a>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <p>© <span data-year>2026</span> Reels Booster. Все права защищены.</p>
+      <p><a href="#">Политика конфиденциальности</a> · <a href="#">Оферта</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('[data-year]').forEach(function(el) {
+      el.textContent = new Date().getFullYear();
+    });
+  </script>
+
+</body>
+</html>

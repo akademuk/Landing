@@ -50,7 +50,7 @@
       transparent 80%);
 
   /* Шрифты */
-  --ff-display: "Manrope", "Azo Sans", system-ui, -apple-system, sans-serif;
+  --ff-display: azo-sans-web, sans-serif;
   --ff-body: "Inter", system-ui, -apple-system, sans-serif;
   --ff-numeric: "Oswald", "Manrope", system-ui, sans-serif;
   --ff-script: "Bad Script", "Caveat", cursive;
@@ -146,21 +146,22 @@ h4 {
 }
 
 .steps__text .text-gradient {
-  background: var(--grad-brand);
+  background: linear-gradient(-175deg, #FF831A 13.57%, #5B5AFF 90.57%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
 .hero__title .text-gradient {
-  background: var(--grad-brand);
+  background: linear-gradient(245deg, #FF831A 13.57%, #5B5AFF 90.57%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 61px;
-  font-weight: 700;
-  line-height: 120%;
-  letter-spacing: 0;
+  text-align: center;
+  font-size: 38px;
+  font-weight: 900;
+  line-height: 125%; 
+  letter-spacing:  0;
   font-family: var(--ff-display);
 }
 
@@ -210,10 +211,12 @@ h4 {
   width: 4px;
   height: 125px;
   margin: 0 auto 40px;
+  /* border-radius: 99px; */
+  /* background: radial-gradient(289115.63% 47.16% at -1.83% 55.11%, #E24DD0 0%, rgba(226, 77, 208, 0.00) 87.02%);
+  border-radius: 2px;
+  box-shadow: 0 0 24px rgba(170, 43, 142, 0.45); */
   border-radius: 99px;
   background: radial-gradient(289115.63% 47.16% at -1.83% 55.11%, #E24DD0 0%, rgba(226, 77, 208, 0.00) 87.02%);
-  border-radius: 2px;
-  box-shadow: 0 0 24px rgba(170, 43, 142, 0.45);
 }
 
 /* фоновые радиальные пятна */
@@ -253,6 +256,11 @@ h4 {
   -webkit-text-fill-color: transparent;
 }
 
+.section.section--steps .section__eyebrow {
+  font-size: 24px;
+  line-height: 140%;
+}
+
 .section--example .section__divider {
   margin-bottom: 58px;
 }
@@ -287,6 +295,8 @@ h4 {
   max-width: 640px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
 }
 
 .section--why-bxo {
@@ -330,17 +340,24 @@ h4 {
 }
 
 .section__footer-text .text-gradient {
-  background: linear-gradient(180deg, #FF831A 0%, #9C9CFE 100%);
-  -webkit-background-clip: text;
+  background: linear-gradient(45deg, #FF831A 13.57%, #5B5AFF 90.57%);
   background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-pink {
-  background: linear-gradient(180deg, #FF831A 0%, #9C9CFE 100%);
-  -webkit-background-clip: text;
+background: linear-gradient(245deg, #FF831A 13.57%, #5B5AFF 90.57%);
   background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.how-list__item--final p.text-gradient-pink{
+  background: linear-gradient(259deg, #E24DD0 7.73%, #FCB683 86.03%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .text-gradient-vert {
@@ -604,7 +621,6 @@ h4 {
 
 .video-preview__play:hover {
   transform: translate(-50%, -50%) scale(1.06);
-  background: var(--c-text);
 }
 
 /* =============================== STEPS ================================= */
@@ -789,7 +805,7 @@ h4 {
 }
 
 .section--example::before {
-  content: "";
+  content: none;
   position: absolute;
   inset: 0;
   background: var(--grad-bg-glow);
@@ -915,7 +931,7 @@ h4 {
   position: relative;
   background: var(--c-bg);
   color: var(--c-blue);
-  margin: 20px auto 42px;
+  margin: 20px auto 36px;
   z-index: 1;
   background: var(--grad-brand);
   background-clip: text;
@@ -928,7 +944,7 @@ h4 {
   position: absolute;
   inset: -2px;
   border-radius: var(--r-pill);
-  padding: 2px;
+  padding: 4px;
   background: var(--grad-brand);
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
@@ -943,7 +959,7 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 0;
-  margin: 36px 0 24px;
+  margin: 15px 0 8px;
   position: relative;
 }
 
@@ -1101,7 +1117,7 @@ h4 {
 
 .how-list__item p {
   font-family: var(--ff-body);
-  color: var(--c-text-75);
+  color: #F3F3F3;
   font-size: clamp(24px, 3.2vw, 15px);
   line-height: 1.4;
   max-width: 382px;
@@ -1123,7 +1139,7 @@ h4 {
   flex-direction: column;
   align-items: stretch;
   gap: 28px;
-  margin-top: 32px;
+  margin-top: 47px;
 }
 
 .way-card.way-card--accent {
@@ -1140,11 +1156,12 @@ h4 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   margin-bottom: 32px;
+  position: relative;
+  z-index: 2;
 }
 
 .way-card {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--c-border);
   border-radius: var(--r-md);
   padding: 24px;
   text-align: center;
@@ -1152,6 +1169,8 @@ h4 {
   font-size: clamp(24px, 3.4vw, 15px);
   color: var(--c-text-75);
   line-height: 1.4;
+  position: relative;
+  z-index: 2;
 }
 
 .way-card--accent {
@@ -1467,7 +1486,7 @@ h4 {
   height: 24px;
   border-radius: 50%;
   border: 1px solid var(--c-text-60);
-  display: grid;
+  text-align: center;
   place-items: center;
   font-size: 18px;
   line-height: 1;
@@ -1573,6 +1592,8 @@ h4 {
   border-radius: 99px;
   font-size: 24px;
   margin: 0 auto 20px auto;
+  background: #BB55A4;
+  box-shadow: none;
 }
 
 .tariff__badge--violet {
@@ -1829,7 +1850,7 @@ h4 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: bottom;
+  object-position: top;
 }
 
 .site-footer__inner {
@@ -2035,6 +2056,10 @@ h4 {
   margin-bottom: 67px;
 }
 
+.section--ways .section__paragraph:nth-last-of-type(1) {
+  color: #F3F3F3;
+}
+
 .section--program .section__header {
   gap: 27px;
   margin-bottom: 57px;
@@ -2070,6 +2095,7 @@ h4 {
 
 .section--guarantee .section__paragraph {
   margin-bottom: 22px;
+  color: #F3F3F3;
 }
 
 .section--guarante__paragraph .btn {
@@ -2244,17 +2270,17 @@ h4 {
 }
 
 .section--ways .section__title.section__title--big .text-accent-blue {
-  background: linear-gradient(180deg, #FF831A 0%, #9C9CFE 100%);
+  background: linear-gradient(200deg, #FF831A 0%, #9C9CFE 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 
 .section--result .section__title {
-  background: linear-gradient(180deg, #FF831A 0%, #9C9CFE 100%);
-  -webkit-background-clip: text;
+  background: linear-gradient(259deg, #E24DD0 7.73%, #FCB683 86.03%);
   background-clip: text;
-  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section.section--result .section__header {
@@ -2282,7 +2308,7 @@ h4 {
 }
 
 .section--program .section__title--big {
-  background: linear-gradient(180deg, #FF831A 0%, #9C9CFE 100%);
+  background: linear-gradient(245deg, #FF831A 0%, #9C9CFE 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -2341,9 +2367,24 @@ h4 {
   overflow: visible;
 }
 
+.tariff__pay-note span {
+  background: linear-gradient(259deg, #E24DD0 7.73%, #FCB683 86.03%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section.section--two-guarantees .section__paragraph{
+  color: #F3F3F3;
+}
+
 .section__paragraph.section__paragraph2 {
   position: relative;
   z-index: 2;
+}
+
+.section--why .section__paragraph {
+  color: #F3F3F3;
 }
 
 .phones-collage {
@@ -2393,6 +2434,42 @@ h4 {
   transform: translate(-50%, -50%);
   z-index: 0;
 }
+
+.section.section--guarantee .section__title .text-gradient-pink{
+background: linear-gradient(260deg, #E24DD0 37.12%, #FCB683 157.74%), #FFF;
+background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.phone-mock:first-child {
+  z-index: 4;
+}
+
+.phone-mock.phone-mock--right {
+  z-index: 3;
+}
+
+.section.section--example {
+  padding-top: 0;
+}
+
+.section.section--steps {
+  padding-bottom: 0;
+}
+
+.section--example .section__divider {
+  margin: 48px auto;
+}
+
+.section--example .section__header {
+  margin-bottom: 70px;
+}
+
+.stats-collage {
+  width: 100%;
+}
+
 
 /* ============================================================
    ============= TABLET (≥ 768px) =============================
@@ -2531,7 +2608,7 @@ h4 {
 
   /* TARIFFS — в ряд по 3 */
   .tariffs {
-    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(3, 1fr); */
     gap: 24px;
     margin-top: 64px;
   }
@@ -2873,6 +2950,7 @@ h4 {
 
   .stats-collage {
     max-width: 490px;
+    margin-bottom: 57px;
   }
 
   .section.section--why {
@@ -3268,7 +3346,11 @@ h4 {
   }
 
   .section.section--tariffs {
-    padding-top: 118px;
+    padding-top: 0;
+  }
+
+  .section.section--guarantee {
+    padding-bottom: 118px;
   }
 
   .section.section--tariffs .section__divider {
@@ -3530,12 +3612,12 @@ h4 {
     color: transparent;
   }
 
-  .section--result .section__title {
-    background: linear-gradient(180deg, #FF831A 0%, #9C9CFE 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
+.section--result .section__title {
+  background: linear-gradient(259deg, #E24DD0 7.73%, #FCB683 86.03%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
   .section.section--result .section__header {
     position: relative;
@@ -3562,7 +3644,7 @@ h4 {
   }
 
   .section--program .section__title--big {
-    background: linear-gradient(180deg, #FF831A 0%, #9C9CFE 100%);
+    background: linear-gradient(245deg, #FF831A 0%, #9C9CFE 100%);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -3616,6 +3698,18 @@ h4 {
     height: 8px;
     border-radius: 50%;
   }
+
+  .section--guarantee::before {
+    content: none;
+  }
+
+  .hero__title .text-gradient {
+    font-size: 61px;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: 0;
+    font-family: var(--ff-display);
+  }
 }
 
 /* ============================================================
@@ -3659,4 +3753,22 @@ h4 {
   .reels-stack__card {
     transform: none !important;
   }
+}
+
+@media (max-width: 576px) {
+  .stats-collage {
+    justify-content: center;
+  }
+
+  .stats-card.stats-card--main {
+    z-index: 3;
+  }
+}
+
+@media (min-width: 991px) {
+      .tariffs {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin-top: 64px;
+    }
 }
