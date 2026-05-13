@@ -1,0 +1,82 @@
+/* ============================================================
+   404 page — дополнительные стили
+   Токены берутся из styles.css
+   ============================================================ */
+
+.err-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 80px 48px;
+  position: relative;
+  overflow: hidden;
+  background: #101010;
+}
+
+.err-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(55% 45% at 50% 40%,
+      rgba(170, 43, 142, 0.4) 0%,
+      rgba(91, 90, 255, 0.1) 50%,
+      transparent 80%);
+}
+
+.err-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+  max-width: 560px;
+}
+
+/* ── Большой код 404 ── */
+.err-code {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: clamp(96px, 22vw, 180px);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  background: linear-gradient(90deg, #FF831A 0%, #5B5AFF 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 48px rgba(170, 43, 142, 0.4));
+}
+
+/* ── Заголовок ── */
+.err-title {
+  font-family: var(--ff-display);
+  font-weight: 800;
+  font-size: clamp(28px, 6vw, 44px);
+  line-height: 1.2;
+  color: var(--c-text);
+  margin: 0;
+}
+
+/* ── Описание ── */
+.err-text {
+  font-family: var(--ff-body);
+  font-size: clamp(15px, 3.5vw, 18px);
+  color: var(--c-text-75);
+  line-height: 1.55;
+  max-width: 440px;
+  margin: 0;
+}
+
+/* ── Кнопка ── */
+.err-btn {
+  max-width: 320px;
+  width: 100%;
+  margin-top: 8px;
+  font-size: clamp(16px, 3.5vw, 18px);
+  padding: 20px 32px;
+  border-radius: 14px;
+}

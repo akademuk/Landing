@@ -1825,8 +1825,8 @@ background: linear-gradient(245deg, #FF831A 13.57%, #5B5AFF 90.57%);
 
 .faq__body {
   padding: 0 22px 18px;
-  color: var(--c-text-75);
-  font-size: clamp(13px, 3.2vw, 14px);
+  color: #f3f3f3;
+  font-size: clamp(16px, 3.2vw, 24px);
   line-height: 1.55;
 }
 
