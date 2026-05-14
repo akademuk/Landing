@@ -41,7 +41,7 @@
 .err-code {
   font-family: var(--ff-display);
   font-weight: 800;
-  font-size: clamp(120px, 22vw, 320px);
+  font-size: clamp(120px, 22vw, 250px);
   line-height: 1;
   letter-spacing: -0.04em;
   background: linear-gradient(90deg, #FF831A 0%, #5B5AFF 100%);
@@ -73,10 +73,22 @@
 
 /* ── Кнопка ── */
 .err-btn {
-  max-width: 320px;
+ max-width: 320px;
   width: 100%;
   margin-top: 8px;
   font-size: clamp(16px, 3.5vw, 18px);
   padding: 20px 32px;
   border-radius: 14px;
 }
+
+.btn--pink {
+    width: max-content;
+}
+
+@media (min-width: 1280px) {
+    .btn--pink {
+        font-size: 22px;
+        padding: 18px 32px;
+    }
+}
+
