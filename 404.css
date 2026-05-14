@@ -41,7 +41,7 @@
 .err-code {
   font-family: var(--ff-display);
   font-weight: 800;
-  font-size: clamp(150px, 22vw, 380px);
+  font-size: clamp(120px, 22vw, 320px);
   line-height: 1;
   letter-spacing: -0.04em;
   background: linear-gradient(90deg, #FF831A 0%, #5B5AFF 100%);
