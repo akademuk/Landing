@@ -2604,7 +2604,14 @@ background-clip: text;
 
   .program-panel--bonuses {
     grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
   }
+
+    .program-panel--bonuses .program-panel__lessons-title {
+      margin-bottom: 0;
+    }
 
   /* TARIFFS — в ряд по 3 */
   .tariffs {
