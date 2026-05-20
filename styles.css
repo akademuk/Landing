@@ -2662,10 +2662,14 @@ background-clip: text;
     margin-bottom: 32px;
   }
 
+  .section--hero .bg-shape--right {
+    background-image: url(../assets/image/bg-shape-right-desktop.png);
+    background-size: cover;
+    background-position: center;
+  }
+
   .section--hero .bg-shape--right img {
-    content: url(../assets/image/bg-shape-right-desktop.png);
-    width: 100%;
-    height: 100%;
+    display: none;
   }
 
   .hero__cta .btn {
@@ -3063,10 +3067,14 @@ background-clip: text;
     max-width: 100%;
   }
 
+  .bg-shape--right {
+    background-image: url(../assets/image/bg-shape-right-desktop2.png);
+    background-size: cover;
+    background-position: center;
+  }
+
   .bg-shape--right img {
-    content: url(../assets/image/bg-shape-right-desktop2.png);
-    width: 100%;
-    height: 100%;
+    display: none;
   }
 
   .section.section--ways {
