@@ -761,7 +761,7 @@
           <a href="https://secure.wayforpay.com/button/bf77ed29048c6" class="btn btn--pink" data-product="tariff-probyu"
             data-price="35">Купить</a>
           <p class="tariff__pay-note">Будете перенаправлены на платформу WayForPay для оплаты<br>
-            <span>Оплата в USDT</span>
+            <button type="button" class="usdt-trigger" data-usdt>Оплата в USDT</button>
           </p>
           <ul class="tariff__bottom" style="opacity: 0.75;">
             <li><span class="check"><svg xmlns="http://www.w3.org/2000/svg" width="19" height="21" viewBox="0 0 19 21"
@@ -816,7 +816,7 @@
           <a href="https://secure.wayforpay.com/button/b0c1b8fb92510" class="btn btn--pink" data-product="tariff-delayu"
             data-price="69">Купить</a>
           <p class="tariff__pay-note">Будете перенаправлены на платформу WayForPay для оплаты<br>
-            <span>Оплата в USDT</span>
+            <button type="button" class="usdt-trigger" data-usdt>Оплата в USDT</button>
           </p>
           <ul class="tariff__bottom" style="opacity: 0.75;">
             <li><span class="check">
@@ -872,7 +872,7 @@
           <a href="https://secure.wayforpay.com/button/b0c1b8fb92510" class="btn btn--pink"
             data-product="tariff-prodayu" data-price="150">Купить</a>
           <p class="tariff__pay-note">Будете перенаправлены на платформу WayForPay для оплаты<br>
-            <span>Оплата в USDT</span>
+            <button type="button" class="usdt-trigger" data-usdt>Оплата в USDT</button>
           </p>
           <ul class="tariff__bottom" style="opacity: 0.75;">
             <li><span class="check">
@@ -988,6 +988,53 @@
     </div>
   </section>
 
+
+  <!-- =============== USDT MODAL =============== -->
+  <div class="usdt-modal" id="usdtModal" role="dialog" aria-modal="true" aria-labelledby="usdtModalTitle" hidden>
+    <div class="usdt-modal__backdrop" data-usdt-close></div>
+    <div class="usdt-modal__box">
+      <button class="usdt-modal__close" type="button" data-usdt-close aria-label="Закрыть">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+      <div class="usdt-modal__icon">
+        <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="24" cy="24" r="24" fill="url(#usdt-grad)"/>
+          <text x="24" y="30" text-anchor="middle" font-size="20" font-weight="700" fill="white" font-family="Arial">₮</text>
+          <defs>
+            <linearGradient id="usdt-grad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+              <stop stop-color="#E24DD0"/>
+              <stop offset="1" stop-color="#FCB683"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <h2 class="usdt-modal__title" id="usdtModalTitle">Оплата в USDT</h2>
+      <p class="usdt-modal__subtitle">Криптовалютный перевод — быстро,<br>без комиссий банков, анонимно</p>
+      <ol class="usdt-modal__steps">
+        <li>
+          <span class="usdt-modal__step-num">1</span>
+          <span>Напишите нашему ассистенту в Telegram — он пришлёт адрес кошелька и точную сумму в USDT</span>
+        </li>
+        <li>
+          <span class="usdt-modal__step-num">2</span>
+          <span>Отправьте перевод и пришлите скриншот транзакции</span>
+        </li>
+        <li>
+          <span class="usdt-modal__step-num">3</span>
+          <span>Получите доступ к курсу в течение 15 минут после подтверждения</span>
+        </li>
+      </ol>
+      <a href="https://t.me/sabotar" target="_blank" rel="noopener noreferrer" class="btn btn--pink usdt-modal__btn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2Zm4.93 7.02-1.678 7.908c-.123.56-.453.695-.918.432l-2.54-1.873-1.226 1.18c-.136.136-.25.25-.51.25l.18-2.594 4.7-4.247c.204-.18-.044-.28-.317-.1L7.77 13.95l-2.5-.78c-.543-.17-.554-.543.113-.803l9.72-3.747c.452-.163.848.1.827.4Z" fill="white"/>
+        </svg>
+        Написать @sabotar
+      </a>
+      <p class="usdt-modal__note">Принимаем USDT TRC-20 и ERC-20</p>
+    </div>
+  </div>
 
   <footer class="site-footer">
     <div class="container site-footer__inner">

@@ -2383,11 +2383,167 @@ background: linear-gradient(245deg, #FF831A 13.57%, #5B5AFF 90.57%);
   overflow: visible;
 }
 
-.tariff__pay-note span {
+.tariff__pay-note span,
+.usdt-trigger {
   background: linear-gradient(259deg, #E24DD0 7.73%, #FCB683 86.03%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.usdt-trigger {
+  display: inline;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(226, 77, 208, 0.4);
+  transition: text-decoration-color 0.2s;
+}
+
+.usdt-trigger:hover {
+  text-decoration-color: rgba(226, 77, 208, 0.9);
+}
+
+/* ===== USDT MODAL ===== */
+.usdt-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.usdt-modal[hidden] {
+  display: none;
+}
+
+.usdt-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  cursor: pointer;
+}
+
+.usdt-modal__box {
+  position: relative;
+  z-index: 1;
+  background: #1a1a2e;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 40px 32px 32px;
+  max-width: 440px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
+  animation: usdt-modal-in 0.25s ease;
+}
+
+@keyframes usdt-modal-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.usdt-modal__close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, color 0.2s;
+}
+
+.usdt-modal__close:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.usdt-modal__icon {
+  margin: 0 auto 16px;
+  width: 48px;
+  height: 48px;
+}
+
+.usdt-modal__title {
+  font-family: var(--ff-display);
+  font-size: 26px;
+  font-weight: 700;
+  color: #F3F3F3;
+  margin: 0 0 8px;
+  line-height: 1.2;
+}
+
+.usdt-modal__subtitle {
+  font-size: 15px;
+  color: rgba(243, 243, 243, 0.6);
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+.usdt-modal__steps {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  text-align: left;
+}
+
+.usdt-modal__steps li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: 14px;
+  color: rgba(243, 243, 243, 0.85);
+  line-height: 1.5;
+}
+
+.usdt-modal__step-num {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #E24DD0, #FCB683);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+}
+
+.usdt-modal__btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  text-decoration: none;
+}
+
+.usdt-modal__note {
+  font-size: 12px;
+  color: rgba(243, 243, 243, 0.35);
+  margin: 0;
 }
 
 .section.section--two-guarantees .section__paragraph{

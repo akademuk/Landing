@@ -69,4 +69,32 @@
   if (floating) {
     setTimeout(function () { floating.removeAttribute('hidden'); }, 5000);
   }
+
+  // -------- USDT Modal ----------
+  var usdtModal = document.getElementById('usdtModal');
+
+  function openUsdtModal() {
+    if (!usdtModal) return;
+    usdtModal.removeAttribute('hidden');
+    document.body.style.overflow = 'hidden';
+    usdtModal.querySelector('.usdt-modal__close').focus();
+  }
+
+  function closeUsdtModal() {
+    if (!usdtModal) return;
+    usdtModal.setAttribute('hidden', '');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('[data-usdt]').forEach(function (btn) {
+    btn.addEventListener('click', openUsdtModal);
+  });
+
+  document.querySelectorAll('[data-usdt-close]').forEach(function (el) {
+    el.addEventListener('click', closeUsdtModal);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeUsdtModal();
+  });
 })();
